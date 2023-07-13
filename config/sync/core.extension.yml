@@ -34,6 +34,7 @@ module:
   menu_ui: 0
   module1: 0
   module2: 0
+  module3: 0
   mysql: 0
   node: 0
   options: 0
