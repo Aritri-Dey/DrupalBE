@@ -1,0 +1,10 @@
+access the custom page:
+  title: 'Access custom page'
+  description: 'Gives access custom page to users'
+  restrict access: true
+  
+test check:
+  title: 'Test access check'
+  description: 'Gives test access check permission'
+  restrict access: true
+  
