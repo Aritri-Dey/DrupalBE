@@ -1,0 +1,7 @@
+block_module.my_page:
+  path: '/custom-welcome-page'
+  defaults:
+    _controller: '\Drupal\block_module\Controller\BlockController::myPage'
+    _title: 'Custom Welcome Page'
+  requirements:
+    _permission: 'access content'
