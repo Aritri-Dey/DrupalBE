@@ -17,6 +17,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class ServiceController extends ControllerBase {
 
+  /**
+   *   @var object $currentUser
+   *     To store object of CurrentUser class.
+   */
   protected $currentUser;
 
   /**
@@ -39,9 +43,18 @@ class ServiceController extends ControllerBase {
     );
   }
   
+  /**
+   * Function to display current user username using service dependency by 
+   * calling the service class methods.
+   * 
+   *   @return array 
+   *     Returns render array.
+   */
   public function usernameDI() {
     $username = $this->currentUser->getUsername();
     $cachetags = ['user:' . $this->currentUser->getId()];
+    // If user is not logged in then a message is displayed, else username is
+    // displayed.
     if (!$this->currentUser->getId()) {
       return [
         '#type' => 'markup',
@@ -67,8 +80,8 @@ class ServiceController extends ControllerBase {
   /**
    * Returns a simple page.
    *
-   * @return array
-   *   A simple renderable array.
+   *   @return array
+   *     A simple renderable array.
    */
   public function myPage() {
     return [

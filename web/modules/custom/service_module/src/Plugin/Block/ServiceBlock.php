@@ -19,7 +19,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class ServiceBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
+  /**
+   *   @var object $userRole
+   *     Varible to store user role of current user.
+   */
   protected $userRole;
+
   /**
     * Constructs a Drupalist object.
     *
@@ -32,7 +37,7 @@ class ServiceBlock extends BlockBase implements ContainerFactoryPluginInterface 
     * @param \Drupal\Core\Session\AccountInterface $user_role
     *   The user role of current user.
     */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrentUser $user_role,) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrentUser $user_role) {
     $this->userRole = $user_role;
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -48,6 +53,10 @@ class ServiceBlock extends BlockBase implements ContainerFactoryPluginInterface 
       $container->get('service_module.current_user')
     );
   }
+
+  /**
+   * {@inheridDoc}
+   */
   public function build() {
     $roles = $this->userRole->getRole();
     $role_name = Role::load($roles[1])->label();

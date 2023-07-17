@@ -11,6 +11,11 @@ use Drupal\Core\Session\AccountProxyInterface;
  *    To store curent user.
  */
 class CurrentUser {
+
+  /**
+   *   @var object $currentUser
+   *     Stores the current user account.
+   */
   protected $currentUser;
 
   /**
@@ -25,6 +30,10 @@ class CurrentUser {
 
   /**
    * Function to get username of the current user.
+   * 
+   *   @return string
+   *     Returns account name of current user.
+   *     
    */
   public function getUsername() {
     return $this->currentUser->getAccountName();
@@ -32,6 +41,9 @@ class CurrentUser {
 
   /**
    * Function to get id of the current user.
+   * 
+   *   @return string
+   *     Returns id of the current user account.
    */
   public function getId() {
     return $this->currentUser->id();
@@ -39,8 +51,12 @@ class CurrentUser {
 
   /**
    * Function to get role of the current user.
+   * 
+   *   @return array
+   *     Returns an array of roles.
    */
   public function getRole() {
     return $this->currentUser->getRoles();
   }
+  
 }
