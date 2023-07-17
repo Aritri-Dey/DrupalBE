@@ -1,0 +1,9 @@
+module2.helloUser:
+  path: '/hellouser'
+  defaults:
+    _controller: '\Drupal\module2\Controller\Module2Controller::helloUser'
+    _title: 'This page is created to say hello to the user'
+  requirements:
+    _role: 'administrator'
+    _permission: 'static permission 1'
+    

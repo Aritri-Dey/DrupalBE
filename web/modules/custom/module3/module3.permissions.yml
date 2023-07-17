@@ -1,0 +1,10 @@
+static permission 1:
+  title: 'Static permission 1'
+  description: 'Gives static permission 1 to users'
+  restrict access: false
+
+static permission 2:
+  title: 'Static persmission 2'
+  description: 'Gives static permission 2 to users'
+  restrict access: true
+  

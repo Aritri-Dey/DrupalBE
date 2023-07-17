@@ -1,0 +1,6 @@
+name: 'Module 3'
+type: module
+core_version_requirement: ^9 || ^10
+description: 'Module development understanding for hooks'
+package: 'custom'
+configure: module3.settings_form
