@@ -3,7 +3,7 @@
 /**
  * @file
  * Generates markup to be displayed. Functionality in this Controller 
- * is wired to drupal in mymodule.routing.yml 
+ * is wired to drupal in route_module.routing.yml 
  */
 
 namespace Drupal\route_module\Controller;

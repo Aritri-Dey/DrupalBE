@@ -10,6 +10,9 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class RouteSubscriber extends RouteSubscriberBase {
 
+  /**
+   * {@inheritdoc}
+   */
   public function alterRoutes(RouteCollection $collection) {
     if ($route = $collection->get('route_module.helloUser')) {
       $route->setRequirement('_role', 'administrator + manager');
