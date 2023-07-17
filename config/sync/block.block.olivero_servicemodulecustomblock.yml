@@ -1,0 +1,25 @@
+uuid: 76704a26-41ed-4bc2-8d28-39eb647ed2ba
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - service_module
+    - system
+  theme:
+    - olivero
+id: olivero_servicemodulecustomblock
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: service_module_custom_block
+settings:
+  id: service_module_custom_block
+  label: 'Service Module Custom Block'
+  label_display: visible
+  provider: service_module
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /custom-service-page
