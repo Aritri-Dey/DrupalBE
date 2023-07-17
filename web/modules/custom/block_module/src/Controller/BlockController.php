@@ -14,11 +14,11 @@ use Drupal\Core\Controller\ControllerBase;
  */
 class BlockController extends ControllerBase {
   
-    /**
+  /**
    * Returns a simple page.
    *
-   * @return array
-   *   A simple renderable array.
+   *   @return array
+   *     A simple renderable array.
    */
   public function myPage() {
     return [
