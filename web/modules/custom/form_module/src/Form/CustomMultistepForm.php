@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Drupal\mymodule\Form\CustomMultistepForm.  
+ * Contains Drupal\form_module\Form\CustomMultistepForm.  
  */
 namespace Drupal\form_module\Form;
 
@@ -28,7 +28,6 @@ class CustomMultistepForm extends FormBase {
 
     // If current_page is set to 2, secondForm() method is called.
     if ($form_state->has('current_page') && $form_state->get('current_page') == 2) {
-      // dd($form_state->getValue('current_page', 2));
       return $this->secondForm($form, $form_state);
     }
     // If current_page is set to 3, thirdForm() method is called.

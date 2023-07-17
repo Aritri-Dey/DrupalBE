@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Drupal\mymodule\Form\AjaxForm
+ * Contains Drupal\form_module\Form\AjaxForm
  */
 namespace Drupal\form_module\Form;
 
@@ -11,6 +11,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 
+/**
+ * Form class to define ajax form.
+ */
 class AjaxForm extends FormBase { 
 
   /**

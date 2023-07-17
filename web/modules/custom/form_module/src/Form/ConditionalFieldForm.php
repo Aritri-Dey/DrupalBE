@@ -2,13 +2,16 @@
 
 /**
  * @file
- * Contains Drupal\mymodule\Form\ConditionalFieldForm.  
+ * Contains Drupal\form_module\Form\ConditionalFieldForm.  
  */
 namespace Drupal\form_module\Form;
 
 use Drupal\Core\Form\FormBase;  
 use Drupal\Core\Form\FormStateInterface;  
 
+/**
+ * Form class to define a form containing conditional fields.
+ */
 class ConditionalFieldForm extends FormBase { 
 
   /**
