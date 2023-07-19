@@ -1,6 +1,0 @@
-name: 'Module 2'
-type: module
-core_version_requirement: ^9 || ^10
-description: 'Module development understanding'
-package: 'custom'
-configure: module2.settings_form

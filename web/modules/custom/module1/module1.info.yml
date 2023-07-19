@@ -1,8 +1,0 @@
-name: 'Module 1'
-type: module
-core_version_requirement: ^9 || ^10
-description: 'This is a basic module created for module development task.'
-package: 'custom'
-dependencies:
-  - webform:webform
-configure: module1.settings_form

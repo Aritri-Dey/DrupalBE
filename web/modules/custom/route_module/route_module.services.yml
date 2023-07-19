@@ -1,6 +1,0 @@
-services:
-
-  route_module.event_subscriber:
-    class: Drupal\route_module\Routing\RouteSubscriber
-    tags: 
-      - { name: event_subscriber }
