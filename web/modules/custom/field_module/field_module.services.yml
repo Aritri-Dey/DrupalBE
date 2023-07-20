@@ -1,0 +1,5 @@
+services:
+  field_module.current_user:
+    class: Drupal\field_module\CurrentUser
+    arguments: ['@current_user']
+    
