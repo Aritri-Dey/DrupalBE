@@ -38,9 +38,7 @@ class WidgetPermission extends WidgetBase implements ContainerFactoryPluginInter
    *   Any third party settings.
    */
   public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, CurrentUser $user_role) {
-    $this->fieldDefinition = $field_definition;
-    $this->settings = $settings;
-    $this->thirdPartySettings = $third_party_settings;
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
     $this->userRole = $user_role;
   }
 

@@ -22,16 +22,21 @@ use Drupal\field_module\Plugin\Field\FieldWidget\WidgetPermission;
  *   }
  * )
  */
-class ColorPicker extends WidgetBase { 
+class ColorPicker extends WidgetPermission { 
 
   /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $element['value'] = [
-      '#title' => $this->t('Choose color'),
-      '#type' => 'color',
-    ];
+    
+    $roles = $this->userRole->getRole();
+    // Field is only shown to user with adminitrator role.
+    if (in_array('administrator', $roles)) {
+      $element['value'] = [
+        '#title' => $this->t('Choose color'),
+        '#type' => 'color',
+      ];
+    }
     return $element;
   }
 

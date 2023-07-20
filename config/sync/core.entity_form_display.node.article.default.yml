@@ -46,7 +46,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_color:
-    type: field_module_hexcode_widget
+    type: field_module_rgb_widget
     weight: 121
     region: content
     settings: {  }

@@ -9,6 +9,7 @@ namespace Drupal\field_module\Plugin\Field\FieldWidget;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\field_module\Plugin\Field\FieldWidget\WidgetPermission;
 
 /**
  * Plugin implementation of the 'field_module_rgb_widget' widget.
@@ -21,39 +22,43 @@ use Drupal\Core\Form\FormStateInterface;
  *   }
  * )
  */
-class RgbWidget extends WidgetBase { 
+class RgbWidget extends WidgetPermission { 
 
   /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
    
-    $element['r_value'] = [
-      '#title' => $this->t('R:'),
-      '#type' => 'textfield',
-      '#maxlength' => 4,
-      '#element_validate' => [
-        [$this, 'validateRGB'],
-      ],
-    ];
-
-    $element['g_value'] = [
-      '#title' => $this->t('G:'),
-      '#type' => 'textfield',
-      '#maxlength' => 4,
-      '#element_validate' => [
-        [$this, 'validateRGB'],
-      ],
-    ];
-
-    $element['b_value'] = [
-      '#title' => $this->t('B:'),
-      '#type' => 'textfield',
-      '#maxlength' => 4,
-      '#element_validate' => [
-        [$this, 'validateRGB'],
-      ],
-    ];
+    $roles = $this->userRole->getRole();
+    // Field is only shown to user with adminitrator role.
+    if (in_array('administrator', $roles)) {
+      $element['r_value'] = [
+        '#title' => $this->t('R:'),
+        '#type' => 'textfield',
+        '#maxlength' => 4,
+        '#element_validate' => [
+          [$this, 'validateRGB'],
+        ],
+      ];
+  
+      $element['g_value'] = [
+        '#title' => $this->t('G:'),
+        '#type' => 'textfield',
+        '#maxlength' => 4,
+        '#element_validate' => [
+          [$this, 'validateRGB'],
+        ],
+      ];
+  
+      $element['b_value'] = [
+        '#title' => $this->t('B:'),
+        '#type' => 'textfield',
+        '#maxlength' => 4,
+        '#element_validate' => [
+          [$this, 'validateRGB'],
+        ],
+      ];
+    }
     return $element;
   }
 
