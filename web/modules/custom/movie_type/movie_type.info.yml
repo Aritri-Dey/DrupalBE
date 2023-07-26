@@ -1,0 +1,6 @@
+name: 'Movie Type Module'
+type: module
+core_version_requirement: ^9 || ^10
+description: 'Contains Movie Type Entity Bundle in Content entity.'
+package: 'custom'
+configure: movie_type.settings_form
