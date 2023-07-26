@@ -1,0 +1,15 @@
+#This file will inform Drupal that it should create a new content type.
+# node.type.movie_type.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - movie_type 
+name: 'Movie Type'
+type: movie_type
+description: 'Content type that can be used to provide additional information on <em>Movie</em>'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

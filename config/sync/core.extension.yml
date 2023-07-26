@@ -21,7 +21,6 @@ module:
   dynamic_page_cache: 0
   editor: 0
   field: 0
-  field_module: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -33,6 +32,7 @@ module:
   locale: 0
   menu_link_content: 0
   menu_ui: 0
+  movie_type: 0
   mysql: 0
   node: 0
   options: 0

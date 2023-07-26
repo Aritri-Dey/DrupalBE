@@ -1,66 +1,53 @@
-uuid: 2535bfca-af47-47b3-9573-845664ea165b
+uuid: a6550497-47cf-4c90-b3e7-91f20a52a754
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
-    - node.type.article
+    - field.field.node.movie_type.body
+    - field.field.node.movie_type.field_movie_type_image
+    - field.field.node.movie_type.field_movie_type_price
+    - node.type.movie_type
   module:
-    - comment
-    - image
     - path
     - text
 _core:
-  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
-id: node.article.default
+  default_config_hash: 5M2VoIfF0r6xXTwBza2DvJ_P6jNOON2dVq2l3fCLdJo
+id: node.movie_type.default
 targetEntityType: node
-bundle: article
+bundle: movie_type
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
+    weight: 101
     region: content
     settings: {  }
     third_party_settings: {  }
+    label: hidden
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 1
+  field_movie_type_image:
+    type: text_textarea_with_summary
+    weight: 101
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
+      placeholder: 'movie_type image'
       size: 60
-      placeholder: ''
     third_party_settings: {  }
+    label: above
+  field_movie_type_price:
+    type: text_textarea_with_summary
+    weight: 101
+    region: content
+    settings:
+      placeholder: 'movie_type price'
+      size: 60
+    third_party_settings: {  }
+    label: above
   langcode:
     type: language_select
     weight: 2
@@ -68,6 +55,9 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
   path:
     type: path
     weight: 30

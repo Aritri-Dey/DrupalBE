@@ -1,0 +1,43 @@
+#This file tells Drupal how the content of our custom content type should be displayed by default.
+# core.entity_view_display.node.movie_type.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movie_type.body
+    - field.field.node.movie_type.field_movie_type_price
+    - field.field.node.movie_type.field_movie_type_image
+    - node.type.movie_type
+  module:
+    - file
+    - text
+    - user
+id: node.movie_type.default
+targetEntityType: node
+bundle: movie_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+
+  field_movie_type_price:
+    label: above
+    type: number_integer
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+
+  field_movie_type_image:
+    label: above
+    type: image
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+
+  links:
+    weight: 100
+hidden: {  }

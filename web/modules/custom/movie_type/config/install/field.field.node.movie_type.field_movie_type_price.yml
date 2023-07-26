@@ -1,0 +1,26 @@
+#This file will inform Drupal that it should attach our field to our content type.
+# field.field.node.movie_type.field_movie_type_price.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movie_type_price
+    - node.type.movie_type
+  module:
+    - text
+id: node.movie_type.field_movie_type_price
+field_name: field_movie_type_price
+entity_type: node
+bundle: movie_type
+label: 'Movie Type Price'
+description: 'More specific information about the movie_type'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
