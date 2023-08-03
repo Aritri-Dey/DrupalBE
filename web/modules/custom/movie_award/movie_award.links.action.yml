@@ -1,0 +1,6 @@
+entity.movie_award.add_form:
+  route_name: 'entity.movie_award.add_form'
+  title: 'Add Movie Award'
+  appears_on:
+    - entity.movie_award.collection
+    

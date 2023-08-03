@@ -1,0 +1,15 @@
+movie_award.movie_award.*:
+  type: config_entity
+  label: 'Movie Award config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: string
+    movie:
+      type: array
+      

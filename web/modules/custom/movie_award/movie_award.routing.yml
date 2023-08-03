@@ -1,0 +1,32 @@
+entity.movie_award.collection:
+  path: '/admin/config/system/movie_award'
+  defaults:
+    _entity_list: 'movie_award'
+    _title: 'Movie Award configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.movie_award.add_form:
+  path: '/admin/config/system/movie_award/add'
+  defaults:
+    _entity_form: 'movie_award.add'
+    _title: 'Add Movie Award'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.movie_award.edit_form:
+  path: '/admin/config/system/movie_award/{movie_award}'
+  defaults:
+    _entity_form: 'movie_award.edit'
+    _title: 'Edit Movie Award'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.movie_award.delete_form:
+  path: '/admin/config/system/movie_award/{movie_award}/delete'
+  defaults:
+    _entity_form: 'movie_award.delete'
+    _title: 'Delete Movie Award'
+  requirements:
+    _permission: 'administer site configuration'
+    

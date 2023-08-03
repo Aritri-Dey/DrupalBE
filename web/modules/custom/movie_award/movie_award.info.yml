@@ -1,0 +1,6 @@
+name: 'Movie Award Module'
+type: module
+core_version_requirement: ^9 || ^10
+description: 'Contains implementation of custom config entity named Movie Award.'
+package: 'custom'
+configure: movie_award.settings_form
