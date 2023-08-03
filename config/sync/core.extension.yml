@@ -20,6 +20,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  event_module: 0
   field: 0
   field_ui: 0
   file: 0
@@ -31,7 +32,6 @@ module:
   link: 0
   locale: 0
   menu_link_content: 0
-  menu_module: 0
   menu_ui: 0
   movie_type: 0
   mysql: 0

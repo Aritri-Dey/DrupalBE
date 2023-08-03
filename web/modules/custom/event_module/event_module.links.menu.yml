@@ -1,0 +1,6 @@
+event_module.admin:
+  title: 'Event Module Menu'
+  description: 'Custom menu provided by event module'
+  parent: system.admin
+  route_name: event_module.admin
+  weight: 6

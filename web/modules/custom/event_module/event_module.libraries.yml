@@ -2,4 +2,4 @@ toolbar-icon:
   version: 1.0
   css:
     theme:
-      css/menu_module.css: {}
+      css/event_module.css: {}
