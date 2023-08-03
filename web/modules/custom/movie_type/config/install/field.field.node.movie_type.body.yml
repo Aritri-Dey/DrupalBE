@@ -1,0 +1,23 @@
+#This file will add the body field to our content type.
+# field.field.node.movie_type.body.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.movie_type
+  module:
+    - text
+id: node.movie_type.body
+field_name: body
+entity_type: node
+bundle: movie_type
+label: Movie Type Body
+description: 'More specific information about the movie_type.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
