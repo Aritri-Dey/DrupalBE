@@ -1,0 +1,6 @@
+menu_module.admin:
+  title: 'My Custom Menu'
+  description: 'Custom menu provided by menu module'
+  parent: system.admin
+  route_name: menu_module.admin
+  weight: 6

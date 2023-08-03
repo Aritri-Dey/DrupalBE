@@ -1,0 +1,7 @@
+menu_module.admin:
+  path: '/admin/config/menu_module'
+  defaults: 
+    _form: '\Drupal\menu_module\Form\MenuModuleForm'
+    _title: 'Menu Module Form'
+  requirements: 
+    _permission: 'administer site configuration'

@@ -1,0 +1,46 @@
+uuid: ff0188d4-6dfd-4b10-a5be-7f8a336a732f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.movie_type.body
+    - field.field.node.movie_type.field_movie_type_image
+    - field.field.node.movie_type.field_movie_type_price
+    - node.type.movie_type
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: MfmCA9RJ5AcjCw1HiVH6PmRejhln9LtPg1_JL94QG0Q
+id: node.movie_type.default
+targetEntityType: node
+bundle: movie_type
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_movie_type_image:
+    type: image
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_movie_type_price:
+    type: number_integer
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

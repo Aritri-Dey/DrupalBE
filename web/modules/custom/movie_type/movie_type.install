@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file 
+ * This file demonstrates how to use hook functions.
+ */
+
+/**
+ * Implementing hook_uninstall().
+ */
+function movie_type_uninstall($is_syncing) {
+  $query = \Drupal::entityQuery('node')
+  ->condition('type', 'movie_type')
+  ->count();
+  $query->accessCheck(FALSE);
+  $node_count = $query->execute();
+  if ($node_count > 0) {
+    throw new \Drupal\Core\Extension\ModuleUninstallValidatorException(t('You can not remove this content type until you have removed all of the Movie Type content.'));
+  }
+  else {
+    // Deleting config files.
+    $config_names = [
+    'field.storage.node.field_movie_type_image',
+    'field.storage.node.field_movie_type_price',
+    'field.field.node.movie.field_movie_type_image',
+    'field.field.node.movie.field_movie_type_price',
+    'core.entity_form_display.node.movie_type.default',
+    'core.entity_view_display.node.movie_type.default',
+    ];
+    foreach ($config_names as $config_name) {
+    \Drupal::configFactory()->getEditable($config_name)->delete();
+    }
+  }
+}
