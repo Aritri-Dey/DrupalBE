@@ -1,0 +1,48 @@
+<?php 
+
+/*
+ * Implements hook_toolbar_alter()
+ */
+function menu_module_toolbar_alter(&$items) {
+    $items['administration']['#attached']['library'][] = 'menu_module/toolbar-icon';
+  }
+
+/**
+ * Implements hook_node_view().
+ */
+function menu_module_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $node, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+
+  if ($node->getType() == 'movie_type') {
+    // Get the ID of the node.
+    $node_id = $node->id();
+    $source_entity = \Drupal\node\Entity\Node::load($node_id);
+    if ($source_entity) {
+      // Get the field value from the loaded source entity.
+      $field_value = $source_entity->get('field_movie_type_price')->value;
+      // Get amount from config form.
+      $config = \Drupal::config('menu_module.admin_settings');
+      // Check whether movie is within budget or over budget.
+      if ($config->get('amount') > $field_value) {
+        $message = '<p><strong>The movie is under budget</strong></p>';
+      }
+      else if ($config->get('amount') < $field_value) {
+        $message = '<p><strong>The movie is over budget</strong></p>';
+      }
+      else {
+        $message = '<p><strong>The movie is within budget</strong></p>';
+      }
+      // Add the message to the node's content.
+      $build['my_custom_message'] = [
+        '#markup' => $message,
+        '#prefix' => '<div class="custom-message">',
+        '#suffix' => '</div>',
+        '#weight' => -100, 
+        '#cache' => [
+          'tags' => $config->getCacheTags(),
+        ],
+      ];
+    }
+  }
+
+}
+  

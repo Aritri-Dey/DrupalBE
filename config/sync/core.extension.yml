@@ -31,8 +31,8 @@ module:
   link: 0
   locale: 0
   menu_link_content: 0
+  menu_module: 0
   menu_ui: 0
-  movie_award: 0
   movie_type: 0
   mysql: 0
   node: 0
