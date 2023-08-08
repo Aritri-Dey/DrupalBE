@@ -1,0 +1,8 @@
+db_tax_term_form:
+  path: '/dbform'
+  defaults:
+    _form: '\Drupal\db_tax_term\Form\DBTaxForm'
+    _title: 'Database-Taxonomy Form'
+  requirements:
+    _permission: 'access content'
+    

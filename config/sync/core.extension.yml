@@ -17,7 +17,7 @@ module:
   contact: 0
   contextual: 0
   datetime: 0
-  db_module: 0
+  db_tax_term: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
