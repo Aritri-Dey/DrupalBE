@@ -1,0 +1,6 @@
+name: 'Databse and taxonomy related module.'
+type: module
+core_version_requirement: ^9 || ^10
+description: 'Database related task module'
+package: 'custom'
+configure: db_tax_term.settings_form
