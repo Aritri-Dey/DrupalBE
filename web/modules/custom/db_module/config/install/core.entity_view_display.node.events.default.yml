@@ -1,0 +1,50 @@
+#This file tells Drupal how the content of our custom content type should be displayed by default.
+# core.entity_view_display.node.events.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.field_events_details
+    - field.field.node.events.field_events_type
+    - field.field.node.events.field_events_date
+    - node.type.events
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.events.default
+targetEntityType: node
+bundle: events
+mode: default
+content:
+  field_events_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_events_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_events_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

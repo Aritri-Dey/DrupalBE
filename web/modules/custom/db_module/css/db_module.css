@@ -1,0 +1,11 @@
+.event-table {
+  border: 1px solid black;
+  padding: 15px;
+  background-color: rgb(187, 141, 230);
+}
+
+.event-table td {
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
+}

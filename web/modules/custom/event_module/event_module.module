@@ -1,8 +1,0 @@
-<?php 
-
-/*
- * Implements hook_toolbar_alter()
- */
-function event_module_toolbar_alter(&$items) {
-    $items['administration']['#attached']['library'][] = 'event_module/toolbar-icon';
-  }

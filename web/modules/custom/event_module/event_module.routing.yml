@@ -1,8 +1,0 @@
-event_module.admin:
-  path: '/admin/config/event_module'
-  defaults: 
-    _form: '\Drupal\event_module\Form\EventModuleForm'
-    _title: 'Event Module Form'
-  requirements: 
-    _permission: 'administer site configuration'
-    

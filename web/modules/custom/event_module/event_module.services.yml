@@ -1,8 +1,0 @@
-# event_module.services.yml
-
-services:
-  event_module.node_message_subscriber:
-    class: Drupal\event_module\EventSubscriber\NodeMessageSubscriber
-    arguments: ['@entity_type.manager', '@current_route_match']
-    tags:
-      - { name: 'event_subscriber' }

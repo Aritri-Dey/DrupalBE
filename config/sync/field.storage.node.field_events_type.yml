@@ -1,0 +1,32 @@
+uuid: 6df27a96-22d8-4e17-a260-87e8a3cdfd7a
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: PdiZoiVnlcEktuxaXkDw5ITkCfX7NYW3q7ZiiLHdJ2E
+id: node.field_events_type
+field_name: field_events_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: wedding
+      label: 'Wedding Ceremony'
+    -
+      value: birthday
+      label: 'Birthday Party'
+    -
+      value: function
+      label: 'Annual function'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
