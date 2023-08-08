@@ -1,0 +1,22 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function db_module_theme($existing, $type, $theme, $path) {
+  return [
+    'db_module_events' => [
+      'variables' => [
+        'value' => NULL,
+        'yearly' => NULL,
+        'quarterly' => NULL,
+      ],
+    ],
+  ];
+}
+
+/*
+ * Implements hook_preprocess()
+ */
+function hook_preprocess(&$variables, $hook) {
+  $items['#attached']['library'][] = 'db_module/event-page';
+}

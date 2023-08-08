@@ -1,0 +1,31 @@
+#This file will inform Drupal that it should create our field.
+# field.storage.node.field_events_type.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_events_type
+field_name: field_events_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: wedding
+      label: 'Wedding Ceremony'
+    -
+      value: birthday
+      label: 'Birthday Party'
+    -
+      value: function
+      label: 'Annual function'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

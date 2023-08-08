@@ -1,0 +1,22 @@
+#This file will add the field_events_date field to our content type.
+# field.field.node.events.field_events_date.yml
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events_date
+    - node.type.events
+  module:
+    - datetime
+id: node.events.field_events_date
+field_name: field_events_date
+entity_type: node
+bundle: events
+label: 'Event Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

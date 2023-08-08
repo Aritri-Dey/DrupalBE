@@ -1,0 +1,6 @@
+event-page:
+  version: 1.0
+  css:
+    theme:
+      css/db_module.css: {}
+      

@@ -1,0 +1,21 @@
+uuid: e2cf5427-f3e5-444a-822e-d587cfe8ce65
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: TMT_Ra-_lu02fCI2Jzry744OUGkd69SyA_4FvdTOMOo
+id: node.field_events_details
+field_name: field_events_details
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

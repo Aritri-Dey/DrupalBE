@@ -1,0 +1,28 @@
+#This file tells Drupal how the teaser of our custom content type should be displayed.
+# core.entity_view_display.node.events.teaser.yml
+langcode: en
+status: true
+dependencies:
+  config:
+      - core.entity_view_mode.node.teaser
+      - field.field.node.events.field_events_date
+      - field.field.node.events.field_events_details
+      - field.field.node.events.field_events_type
+      - node.type.events
+  module:
+      - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_events_date: true
+  field_events_details: true
+  field_events_type: true
+  langcode: true

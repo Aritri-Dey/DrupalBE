@@ -1,0 +1,15 @@
+#This file will inform Drupal that it should create a new content type.
+# node.type.events.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - db_module 
+name: 'Events'
+type: events
+description: 'Content type that can be used to accept values like event title, type, date and details'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

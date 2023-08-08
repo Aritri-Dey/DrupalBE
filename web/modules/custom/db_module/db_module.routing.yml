@@ -1,0 +1,8 @@
+db_module.showEvent:
+  path: '/showevent'
+  defaults:
+    _controller: '\Drupal\db_module\Controller\DBController::showEvent'
+    _title: 'Events List'
+  requirements:
+    _permission: 'access content'
+    
